@@ -42,6 +42,14 @@ Le plus dur n'est pas de construire l'outil. C'est de décider **quoi mesurer**.
 
 La forme est libre : une app, un agent, un script, un questionnaire, une mise en situation. L'outillage aussi : langage, modèle, framework, code généré à 100 % par IA si tu veux. C'est le sujet même de l'événement.
 
+## ⚔️ S'inscrire
+
+👉 **[Ouvrir le formulaire](https://github.com/ai-driven-dev/how-ai-are-you/issues/new?template=inscription.yml)**
+
+Pas de backend, pas de collecte d'emails. Ton compte GitHub suffit. Tu apparais dans [`directory.json`](./directory.json) dans la minute.
+
+Un empêchement ? [Tu te désinscris](https://github.com/ai-driven-dev/how-ai-are-you/issues/new?template=desinscription.yml) aussi vite, sans avoir à te justifier.
+
 ## 🗺️ Comment ça se passe
 
 ```mermaid
@@ -76,14 +84,6 @@ Le salon Discord reste ouvert du début à la fin, pour poser une question ou mo
 Un dépôt public sous licence MIT, avec ton outil qui tourne, une page qui explique ta méthode, et une courte vidéo qui le montre en action.
 
 Pas besoin d'interface graphique. Un outil en ligne de commande bien fait vaut mieux qu'une jolie UI vide.
-
-## ⚔️ S'inscrire
-
-👉 **[Ouvrir le formulaire](https://github.com/ai-driven-dev/how-ai-are-you/issues/new?template=inscription.yml)**
-
-Pas de backend, pas de collecte d'emails. Ton compte GitHub suffit. Tu apparais dans [`directory.json`](./directory.json) dans la minute.
-
-Un empêchement ? [Tu te désinscris](https://github.com/ai-driven-dev/how-ai-are-you/issues/new?template=desinscription.yml) aussi vite, sans avoir à te justifier.
 
 ## 🔮 Après
 
