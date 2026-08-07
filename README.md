@@ -15,7 +15,7 @@
 
 |  |  |
 | --- | --- |
-| 📅 **Quand** | Du 28 au 31 août 2026, date à confirmer |
+| 📅 **Quand** | Du vendredi 28 au lundi 31 août 2026 |
 | ⏱ **Fenêtre** | Vendredi 14h → lundi 12h, soit 70 heures |
 | 🌍 **Où** | 100 % distanciel et asynchrone, sur Discord |
 | 👤 **Format** | Solo. Une personne, un projet |
