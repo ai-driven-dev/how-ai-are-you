@@ -54,7 +54,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@v2
+
+      # Le binaire et non `gitleaks/gitleaks-action`, qui exige une licence
+      # payante dès que le dépôt appartient à une organisation. Même outil,
+      # même règles, sans la facture ni un secret de plus à tenir.
+      - name: Scanner l'historique
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: 8.28.0
+        run: |
+          set -euo pipefail
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/gitleaks_${VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          ./gitleaks git --no-banner --redact --exit-code 1 .
 
