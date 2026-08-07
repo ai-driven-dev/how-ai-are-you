@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner-how-ai-are-you.svg" alt="How AI Are You? — Hackathon AI-Driven Dev" width="100%">
+<img src="./assets/banner.svg" alt="How AI Are You? — Hackathon AI-Driven Dev" width="100%">
 
 <br>
 
