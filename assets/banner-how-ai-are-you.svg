@@ -1,17 +1,22 @@
 <!--
   Bandeau du dépôt : une identité, jamais une donnée.
 
-  La version précédente portait la date, les horaires, le format et le lot. Tout
+  La première version portait la date, les horaires, le format et le lot. Tout
   ça vit dans le tableau en tête du README, à un seul endroit. En le recopiant
   dans une image, on créait une seconde source de vérité que personne ne pense à
   ouvrir dans un éditeur SVG : le passage au week-end asynchrone l'a laissée
   annoncer « Une journée » et « 8h → 19h » pendant que tout le reste disait
   l'inverse.
 
-  Le README du framework applique déjà cette règle : un logo, et les faits en
+  La pastille « HACKATHON AI-DRIVEN DEV » a sauté ensuite. Elle répétait le nom
+  du dépôt et le titre du README, et sa largeur était codée en dur : le texte en
+  débordait dès qu'on touchait à la police. Un cadre dont la taille ne suit pas
+  son contenu est un cadre à ne pas dessiner.
+
+  Le README du framework applique la même règle : un visuel, et les faits en
   texte. Rien ici ne doit changer si la date, l'horaire ou le lot changent.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="How AI Are You? — Hackathon AI-Driven Dev">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="How AI Are You? — Hackathon AI-Driven Dev">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#020244"/>
@@ -32,19 +37,13 @@
     </pattern>
   </defs>
 
-  <rect width="1200" height="340" fill="url(#bg)"/>
-  <rect width="1200" height="340" fill="url(#grid)"/>
-  <ellipse cx="960" cy="100" rx="380" ry="240" fill="url(#glow)"/>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+  <ellipse cx="960" cy="80" rx="380" ry="230" fill="url(#glow)"/>
 
   <g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
-    <g transform="translate(72 84)">
-      <rect x="0" y="0" width="232" height="30" rx="15" fill="#4e4ef9" fill-opacity="0.18" stroke="#4e4ef9" stroke-opacity="0.5"/>
-      <text x="116" y="20" fill="#a9b4ff" font-size="14" font-weight="600" letter-spacing="2.2" text-anchor="middle">HACKATHON AI-DRIVEN DEV</text>
-    </g>
-
-    <text x="72" y="218" fill="#ffffff" font-size="86" font-weight="800" letter-spacing="-2">How AI Are You?</text>
-    <rect x="74" y="238" width="300" height="7" rx="3.5" fill="url(#accent)"/>
-
-    <text x="72" y="292" fill="#c9d1e8" font-size="25" font-weight="400">Construis l'outil qui situe le niveau IA d'un développeur.</text>
+    <text x="72" y="150" fill="#ffffff" font-size="86" font-weight="800" letter-spacing="-2">How AI Are You?</text>
+    <rect x="74" y="176" width="300" height="7" rx="3.5" fill="url(#accent)"/>
+    <text x="72" y="232" fill="#c9d1e8" font-size="25" font-weight="400">Construis l'outil qui situe le niveau IA d'un développeur.</text>
   </g>
 </svg>
