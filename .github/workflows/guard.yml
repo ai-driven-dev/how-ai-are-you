@@ -1,0 +1,60 @@
+name: Garde-fou
+
+# Ce dépôt est public et contient le matériel d'évaluation.
+# Deux erreurs seraient irrattrapables : publier les profils cachés,
+# ou publier les réponses attendues. Ce workflow les rend impossibles.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  fuite:
+    name: Rien de confidentiel n'a fuité
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aucun fichier ni dossier confidentiel
+        run: |
+          set -euo pipefail
+          interdits=$(find . -path ./.git -prune -o \
+            \( -name 'profiles-caches' -o -name '_*' -o -iname '*CORE-TEAM*' \) -print)
+          if [ -n "$interdits" ]; then
+            echo "::error::Matériel confidentiel détecté dans un dépôt public :"
+            echo "$interdits"
+            exit 1
+          fi
+          echo "Aucun fichier confidentiel."
+
+      - name: Aucune réponse de profil caché dans le contenu
+        run: |
+          set -euo pipefail
+          if grep -rInE '\b(p05|p06)\b' --include='*.md' --include='*.json' \
+               --exclude-dir=.git --exclude-dir=.github . ; then
+            echo "::error::Un profil caché est mentionné. Les identifiants p05 et p06 ne doivent jamais apparaître."
+            exit 1
+          fi
+          echo "Aucune mention de profil caché."
+
+  tests:
+    name: L'annuaire se comporte comme prévu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test .github/scripts/update-directory.test.mjs
+
+  secrets:
+    name: Aucun secret
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

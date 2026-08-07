@@ -1,0 +1,69 @@
+name: S'inscrire au hackathon
+description: Inscrivez-vous à How AI Are You?
+title: "Inscription: "
+labels:
+  - inscription
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Votre compte GitHub sert de profil public. Votre inscription est visible de tous.
+
+        À la clôture, vous rendrez votre projet via un second formulaire.
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Édition
+      description: À quel hackathon vous inscrivez-vous ?
+      options:
+        - How AI Are You? (28 au 31 août 2026)
+    validations:
+      required: true
+  - type: input
+    id: display_name
+    attributes:
+      label: Nom d'affichage
+      description: Le nom sous lequel vous apparaîtrez publiquement.
+      placeholder: Votre nom
+    validations:
+      required: true
+  - type: input
+    id: discord
+    attributes:
+      label: Pseudo Discord
+      description: Pour vous retrouver dans le canal de l'événement.
+      placeholder: votre_pseudo
+    validations:
+      required: true
+  - type: input
+    id: linkedin
+    attributes:
+      label: Votre LinkedIn
+      description: Optionnel. Affiché à côté de votre nom sur la page du hackathon, pour qu'on puisse vous suivre.
+      placeholder: https://www.linkedin.com/in/votre-profil
+    validations:
+      required: false
+  - type: input
+    id: tools
+    attributes:
+      label: Vos outils
+      description: Ce avec quoi vous travaillez au quotidien. Aucune obligation, ça sert juste à savoir qui utilise quoi.
+      placeholder: Claude Code, Cursor, Codex, framework AIDD…
+    validations:
+      required: false
+  - type: textarea
+    id: piste
+    attributes:
+      label: La piste que vous comptez explorer
+      description: Optionnel, et vous pourrez en changer. Ça permet aux gens qui creusent la même chose de se trouver.
+      placeholder: Une app de questionnaire adaptatif, un agent qui lit l'activité Git…
+    validations:
+      required: false
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      description: Obligatoire pour participer.
+      options:
+        - label: J'accepte de publier mon projet sous licence MIT, ce qui autorise AI-Driven Dev à le réutiliser, y compris dans un cadre commercial, en m'attribuant le travail.
+          required: true

@@ -1,0 +1,20 @@
+name: Se désinscrire
+description: Retire votre inscription au hackathon.
+title: "Désinscription"
+labels:
+  - desinscription
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vous serez retiré de la liste des inscrits dans la minute.
+
+        On ne vous demande rien d'autre : c'est votre compte GitHub qui fait foi, donc personne ne peut désinscrire quelqu'un d'autre.
+  - type: textarea
+    id: raison
+    attributes:
+      label: Une raison ?
+      description: Optionnel, mais ça nous aide à améliorer le prochain.
+      placeholder: Pas dispo ce week-end-là, sujet trop dur, autre…
+    validations:
+      required: false

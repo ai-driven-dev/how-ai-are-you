@@ -1,0 +1,58 @@
+name: Rendre son projet
+description: À remplir avant la clôture, le lundi à 12h.
+title: "Rendu: "
+labels:
+  - rendu
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **La date et l'heure de ce formulaire font foi.** Il ferme le lundi à 12h.
+
+        Vérifiez avant d'envoyer que votre repo est public et que votre README permet de lancer l'outil.
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Édition
+      options:
+        - How AI Are You? (28 au 31 août 2026)
+    validations:
+      required: true
+  - type: input
+    id: discord
+    attributes:
+      label: Pseudo Discord
+      description: Le même que celui de votre inscription.
+      placeholder: votre_pseudo
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Lien de votre repo
+      description: Public, sous licence MIT.
+      placeholder: https://github.com/vous/votre-projet
+    validations:
+      required: true
+  - type: input
+    id: demo
+    attributes:
+      label: Lien de votre vidéo ou GIF
+      description: Deux minutes maximum, et compréhensible sans le son — elle sera publiée muette. Peut aussi être un fichier dans le repo, auquel cas donnez son lien direct.
+      placeholder: https://…
+    validations:
+      required: true
+  - type: textarea
+    id: pitch
+    attributes:
+      label: Votre approche en trois lignes
+      description: Ce que vous mesurez et pourquoi. Le détail va dans votre page de méthodo.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Avant d'envoyer
+      options:
+        - label: Aucune clé d'API n'est présente dans le code ni dans l'historique Git
+          required: true
