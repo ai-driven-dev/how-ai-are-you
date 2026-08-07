@@ -1,6 +1,17 @@
 {
   "event": "how-ai-are-you",
-  "updated_at": null,
-  "count": 0,
-  "participants": []
+  "updated_at": "2026-08-07T11:19:57.158Z",
+  "count": 1,
+  "participants": [
+    {
+      "github": "blafourcade",
+      "name": "Baptiste Lafourcade",
+      "discord": "blafourcade",
+      "linkedin": "https://www.linkedin.com/in/baptiste-lafourcade",
+      "tools": "Claude Code, framework AIDD",
+      "piste": "Test du flux d'inscription avant ouverture",
+      "registered_at": "2026-08-07T11:19:45Z",
+      "issue": 1
+    }
+  ]
 }
